@@ -99,10 +99,10 @@ import time
 from sqlalchemy import create_engine
 from config import db_password
 
-# 1. Create a function that takes in three arguments;
+# 1. Create a function that returns three arguments;
 # Wikipedia data, Kaggle metadata, and MovieLens rating data (from Kaggle)
 
-def three_arguments_func():
+def extract_transform_load():
     # 2. Read in the kaggle metadata and MovieLens ratings CSV files as Pandas DataFrames.
     kaggle_metadata = pd.read_csv(f'{file_dir}movies_metadata.csv', low_memory=False)
     ratings = pd.read_csv(f'{file_dir}ratings.csv')    
@@ -119,7 +119,7 @@ def three_arguments_func():
     return wiki_movies_df, kaggle_metadata, ratings
 
 # 6. Create the path to your file directory and variables for the three files. 
-file_dir = "C://Users/
+file_dir = "../Resources/"
 
 # Wikipedia data
 wiki_file = f'{file_dir}/wikipedia.movies.json'
@@ -131,7 +131,7 @@ kaggle_file = f'{file_dir}/movies_metadata.csv'
 ratings_file = f'{file_dir}/ratings.csv'
 
 # 7. Set the three variables in Step 6 equal to the function created in Step 1.
-wiki_file, kaggle_file, ratings_file = three_arguments_func()
+wiki_file, kaggle_file, ratings_file = extract_transform_load()
 
 # 8. Set the DataFrames from the return statement equal to the file names in Step 6. 
 wiki_movies_df = wiki_file
