@@ -11,9 +11,9 @@ Primary keys are an important part of database design. When a database is being 
 Using your knowledge of Python, Pandas, the ETL process, and code refactoring, write a function that reads in the three data files and creates three separate DataFrames.
 
 1. An ETL function is written to read in the three data files. 
-2. The function converts the Wikipedia JSON file to a Pandas DataFrame, and the DataFrame is displayed in the `ETL_function_test.ipynb file`.
-3. ​The function converts the Kaggle metadata file to a Pandas DataFrame, and the DataFrame is displayed in the `ETL_function_test.ipynb file`.
-4. The function converts the MovieLens ratings data file to a Pandas DataFrame, and the DataFrame is displayed in the `ETL_function_test.ipynb` file.
+2. The function converts the Wikipedia JSON file to a Pandas DataFrame, and the DataFrame is displayed in the `ETL_function.ipynb file`.
+3. The function converts the Kaggle metadata file to a Pandas DataFrame, and the DataFrame is displayed in the `ETL_function.ipynb file`.
+4. The function converts the MovieLens ratings data file to a Pandas DataFrame, and the DataFrame is displayed in the `ETL_function.ipynb` file.
 
  
 ### Results with detail analysis:
@@ -37,7 +37,7 @@ from sqlalchemy import create_engine
 from config import db_password
 
 # Create the path to your file directory and variables for the three files. 
-file_dir = "C://Users/
+file_dir = "../Resources/"
 
 # Wikipedia data
 wiki_file = f'{file_dir}/wikipedia.movies.json'
@@ -48,7 +48,7 @@ kaggle_file = f'{file_dir}/movies_metadata.csv'
 # MovieLens rating data.
 ratings_file = f'{file_dir}/ratings.csv'
 ````
-2. **The function converts the Wikipedia JSON file to a Pandas DataFrame, and the DataFrame is displayed in the `ETL_function_test.ipynb file`.**
+2. **The function converts the Wikipedia JSON file to a Pandas DataFrame, and the DataFrame is displayed in the `ETL_function.ipynb file`.**
 
 
 **Code**
@@ -353,7 +353,7 @@ def three_arguments_func():
     return wiki_movies_df, kaggle_metadata, ratings
 
 # 17. Create the path to your file directory and variables for the three files.
-file_dir = "C://Users/
+file_dir = "../Resources/"
 # The Wikipedia data
 wiki_file = f'{file_dir}/wikipedia.movies.json'
 # The Kaggle metadata
@@ -534,7 +534,7 @@ Using your knowledge of Python, Pandas, the ETL process, and code refactoring, e
 
 ````python
 # 10. Create the path to your file directory and variables for the three files.
-file_dir = "C://Users/...
+file_dir = "../Resources/"
 # The Wikipedia data
 wiki_file = f'{file_dir}/wikipedia.movies.json'
 # The Kaggle metadata
